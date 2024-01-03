@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://img.icons8.com/external-icongeek26-linear-colour-icongeek26/64/external-K-alphabet-icongeek26-linear-colour-icongeek26-2.png" alt="external-K-alphabet-icongeek26-linear-colour-icongeek26-2">
+
+    <title>Tema Claro e Escuro  </title>
+    <style>
+        body{
+            background-color: wheat;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            font-family: sans-serif;
+        }
+        .btn1{
+            background-image: url('img/escuro.png');
+            background-size: auto 90px;
+            background-repeat: no-repeat; 
+            background-position: center;
+        }
+        .btn2{
+            background-image: url(img/claro.png);
+            background-size: auto 90px;
+            background-repeat: no-repeat; 
+            background-position: center;
+        }
+        #btnmudar{
+            text-align: center;
+            width: 200px;
+            height: 100px;
+            border-radius: 10px;
+            color: red;
+            font-size: 25px;
+            cursor: pointer;
+            background-color: beige;
+            box-shadow: -3px 3px 5px black;
+        }
+        
+        #btnmudar:hover{
+            background-color:#00000050;
+            color: black;
+            font-weight: 700;
+            transition: .3s;
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <input type="button" value=""  id="btnmudar" onclick="mudar()" class="btn1">
+    <input type="button" value="" id="btnmudar" onclick="mudarC()" class="btn2">
+    <!-- <h3>OLÁ , BEM VINDO AO MEU SITE! , VOLTE OUTRA HORA..</h3> -->
+    <script>
+        
+        var body = window.document.body
+        var btn1 = document.querySelector('input.btn1')
+        var btn2 = document.querySelector('input.btn2')
+        btn2.style.display = 'none'
+        // var msg1 = document.querySelector('h3')
+        // var msg2 = document.querySelector('h3')
+
+        function mudar(){
+            var mudar = document.getElementById('btnmudar')
+            body.style.background = '#000000aa'
+            // mudar.value ='ESCURO'
+            // mudar.style.background = 'antiquewhite'
+            btn1.style.display ='none'
+            btn2.style.display = 'block'
+            // msg1.innerText = ' Boa Noite '
+            
+        }
+        function mudarC(){
+            var mudarC = document.getElementById('btnmudar')
+            body.style.background = '#eeeeee'
+            // mudarC.value ='CLARO'
+            // mudarC.style.background = 'antiquewhite'
+            btn1.style.display = 'block'
+            btn2.style.display = 'none'
+            // msg1.innerText = ' Apaga a luz porra eu quero dormir '
+            
+        }
+        
+    </script>
+</body>
+</html>
